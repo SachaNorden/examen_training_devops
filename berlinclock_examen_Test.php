@@ -2,7 +2,7 @@
 use berlinclock_examen;
 use PHPUnit\Framework\TestCase;
 
-class berlinclock_examen_test extends TestCase
+class berlinclock_examen_est extends TestCase
 {
     public function testpassword(){
 
