@@ -9,18 +9,11 @@ class IPLsocial
     {
         $this->password=$this->password;
     }
-    public function minCharactersReturnBoolean($string)
-    {
-        return(strlen($string)<8);
-    }
 
-    public function containNumReturnBoolean($string)
-    {
-        return (preg_match('/[0-9]/',$string));
-    }
-    public function specialCharactersReturnBoolean($string)
-    {
-        return (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/',$string));
+    public function verificationMin8CharacterANDSpecialCharANDOneNumberReturnBoolean($string){
+        if(strlen($string)<8)return false;
+        if(!preg_match('/[0-9]/',$string))return false;
+        if(!preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/',$string))return false;
     }
 
 }
